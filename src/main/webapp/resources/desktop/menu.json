@@ -1,0 +1,7 @@
+{
+  "leaf": false,
+  "children": [
+    { "text": "Дом", "iconCls": "x-fa fa-home", "xtype": "homeview", "leaf": true },
+    { "text": "Деревья", "iconCls": "x-fa fa-tree", "xtype": "xu_treeview", "leaf": true }
+  ]
+}
