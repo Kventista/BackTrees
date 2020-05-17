@@ -4,6 +4,7 @@ Ext.define('TreeXu.view.nav.menu.MenuView', {
 		'Ext.data.TreeStore',
 	],
 	xtype: 'menuview',
+	cls: 'menuview',
 	ui: 'nav',
 	scrollable: true,
 	bind: { micro: '{navCollapsed}' },

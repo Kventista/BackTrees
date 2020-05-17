@@ -1,7 +1,3 @@
-/**
- * This view is an example list of people.
- */
-
 Ext.define('TreeXu.view.treeview.TreeView', {
     extend: 'Ext.tree.Panel',
     xtype: 'xu_treeview',
@@ -9,9 +5,10 @@ Ext.define('TreeXu.view.treeview.TreeView', {
     requires: [
         'TreeXu.store.TreeData'
     ],
+    cls: 'treeview',
     store:Ext.create('xu_tree_store'),
     rootVisible: true,
-    title: "My awesome directory tree named after Ksyshen'ka",
+    title: "Directory tree",
 
     columns: [{
         xtype: 'treecolumn',
@@ -20,7 +17,7 @@ Ext.define('TreeXu.view.treeview.TreeView', {
         flex: 1,
         renderer: function (val, meta, rec) {
             if (rec.get('isLayover')) {
-                meta.tdStyle = 'color: gray; font-style: italic;';
+                meta.tdStyle = 'color: blue; font-style: italic;';
             }
             return val;
         }

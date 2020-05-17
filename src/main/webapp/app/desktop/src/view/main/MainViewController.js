@@ -79,10 +79,10 @@ Ext.define('TreeXu.view.main.MainViewController', {
     //var topPic = this.lookup('topPic');
     var topPic = Ext.getCmp('topPic');
     if (vm.get('navCollapsed') == true) {
-      topPic.setData({ src:'resources/desktop/2.png', caption:'John Smith', imgStyle: 'imgSmall', height: '100px' });
+      topPic.setData({ src:'resources/desktop/2.jpg', caption:'Kventista', imgStyle: 'imgSmall', height: '100px' });
     }
     else {
-      topPic.setData({ src:'resources/desktop/2.png', caption:'John Smith', imgStyle: 'imgBig', height: '150px' });
+      topPic.setData({ src:'resources/desktop/2.jpg', caption:'Kventista', imgStyle: 'imgBig', height: '150px' });
     }
 
   },

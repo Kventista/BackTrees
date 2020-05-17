@@ -7,6 +7,6 @@ Ext.define('TreeXu.view.home.HomeView',{
 	extend: 'Ext.Container',
   scrollable: true,
   html: `
-  Welcome to my first sencha app. I am XU.
+  Welcome to my first sencha app.
 `
 });

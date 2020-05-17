@@ -5,7 +5,7 @@ Ext.define('TreeXu.view.main.nav.top.TopView', {
   items: [
     {
       xtype: 'component', 
-      data: { src:'resources/desktop/2.png', caption:'Xu xu', imgStyle: 'imgBig', height: '150px' },
+      data: { src:'resources/desktop/2.jpg', caption:'Kventista', imgStyle: 'imgBig', height: '150px' },
       reference: 'topPic',
       id: 'topPic',
       tpl: new Ext.XTemplate(`

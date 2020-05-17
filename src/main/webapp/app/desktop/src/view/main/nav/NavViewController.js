@@ -22,7 +22,6 @@ Ext.define("TreeXu.view.main.nav.NavViewController", {
   updateMicro: function(micro) {
     this.lookup("menuview").setMicro(micro);
     this.getView().setWidth(micro ? 44 : 300);
-    this.lookup("bottomview").setHidden(micro);
   },
 
   onTopViewNavToggle: function(button) {

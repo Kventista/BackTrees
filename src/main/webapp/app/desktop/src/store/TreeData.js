@@ -5,7 +5,7 @@ Ext.define('TreeXu.store.TreeData', {
     model: 'TreeXu.model.Tree',
     fields: ['name', 'size'],
     type: 'tree',
-    storeId: 'XuXi',
+    storeId: 'TreeId',
 
 });
 

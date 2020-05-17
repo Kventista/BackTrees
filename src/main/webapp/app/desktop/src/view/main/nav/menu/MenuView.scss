@@ -5,8 +5,8 @@ $nav-text-color: white;
 $nav-indicator-color: lighten($panel-navigation-background-color, 30%);
 $nav-indicator-color-over: lighten($panel-navigation-background-color, 40%);
 
-$nav-bg-color-over: lighten($nav-base-color, 10%);
-$nav-bg-color-selected: lighten($nav-base-color, 5%);
+$nav-bg-color-over: darken($nav-base-color, 14%);
+$nav-bg-color-selected: darken($nav-base-color, 15%);
 
 $nav-text-color-over: lighten($nav-text-color, 20%);
 
@@ -28,8 +28,7 @@ $nav-font-size: $font-size;
 	$item-icon-font-size: $nav-font-size,
 	$item-text-font-size: $nav-font-size,
 	$item-expander-font-size: $nav-font-size,
-
-	$item-line-height : 35px,
+$item-line-height : 35px,
 	$item-text-overflow: initial,
 
 	$background-color: $panel-navigation-background-color,
