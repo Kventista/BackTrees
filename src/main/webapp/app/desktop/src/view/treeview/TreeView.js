@@ -1,12 +1,23 @@
 Ext.define('TreeXu.view.treeview.TreeView', {
     extend: 'Ext.tree.Panel',
-    xtype: 'xu_treeview',
-    controller: "xutreecontroller",
+    xtype: 'apptreeview',
+    controller: "appTreeViewController",
     requires: [
         'TreeXu.store.TreeData'
     ],
     cls: 'treeview',
-    store:Ext.create('xu_tree_store'),
+    // store: ['TreeId'],
+    // bind: {
+    //     store: '{treeData}'
+    // },
+    // store: 'store.appTreeData',
+    // store: ['store.appTreeData'],
+    // bind: {
+    //     store: '{appTreeData}',
+    // },
+    // store: "appTreeData",
+    // store: 'TreeXu.store.TreeData',
+    store:Ext.create('store.appTreeData'),
     rootVisible: true,
     title: "Directory tree",
 

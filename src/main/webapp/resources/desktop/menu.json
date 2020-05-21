@@ -5,6 +5,6 @@
       "font-size": "20px",
       "color": "blue"
     },
-    { "text": "Trees", "iconCls": "x-fa fa-tree", "xtype": "xu_treeview", "leaf": true }
+    { "text": "Trees", "iconCls": "x-fa fa-tree", "xtype": "apptreeview", "leaf": true }
   ]
 }

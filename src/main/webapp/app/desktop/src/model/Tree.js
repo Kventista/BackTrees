@@ -1,7 +1,7 @@
 Ext.define('TreeXu.model.Tree', {
     extend: 'TreeXu.model.Base',
     requires: ['Ext.data.proxy.Ajax'],
-    alias: 'xu_tree_model',
+    alias: 'model.appTree',
     idProperty : 'id',
     fields: [{
         name: 'id',
@@ -14,9 +14,9 @@ Ext.define('TreeXu.model.Tree', {
         mapping: 'size'
     },
         {
-        name: 'leaf',
-        mapping: 'leaf'
-    },
+            name: 'leaf',
+            mapping: 'leaf'
+        },
         {
             name: 'parentId',
             mapping: 'parentId'
@@ -24,7 +24,7 @@ Ext.define('TreeXu.model.Tree', {
     ],
     proxy: {
         type: 'rest',
-        url: 'http://127.0.0.1:8080/treeFolder/',
+        url: 'http://localhost:8080/treeFolder/',
         idParam: 'id',
         actionMethods: {
             create: 'POST',
@@ -33,10 +33,10 @@ Ext.define('TreeXu.model.Tree', {
             destroy: 'DELETE'
         },
         api: {
-            create: 'http://127.0.0.1:8080/treeFolder/',
-            read: 'http://127.0.0.1:8080/treeFolder/children/',
-            update: 'http://127.0.0.1:8080/treeFolder/',
-            destroy: 'http://127.0.0.1:8080/treeFolder/'
+            create: 'http://localhost:8080/treeFolder/',
+            read: 'http://localhost:8080/treeFolder/children/',
+            update: 'http://localhost:8080/treeFolder/',
+            destroy: 'http://localhost:8080/treeFolder/'
         },
         reader: {
             type: 'json',

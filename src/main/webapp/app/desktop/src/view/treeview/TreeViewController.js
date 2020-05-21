@@ -2,17 +2,18 @@
  * This class is the controller for the main view for the application. It is specified as
  * the "controller" of the Main view class.
  */
-const store = Ext.getStore('XuXi');
+// const store = Ext.getStore('TreeId');
 
 Ext.define('TreeXu.view.treeview.TreeViewController', {
     extend: 'Ext.app.ViewController',
-    alias: "controller.xutreecontroller",
+    alias: "controller.appTreeViewController",
     onAddFolderAction: function (grid, rowIndex, colIndex, actionItem, event, record) {
         if (!record.isLeaf()) {
             Ext.MessageBox.prompt('New folder', 'Please enter folder name:', function (btnText, sInput) {
                 if (btnText === 'ok') {
                     record.appendChild({name: sInput, leaf: false});
-                    store.sync();
+                    grid.getStore('TreeId');
+                    // store.sync();
                     record.expand();
 
                 }
@@ -28,7 +29,9 @@ Ext.define('TreeXu.view.treeview.TreeViewController', {
             Ext.MessageBox.prompt('New file', 'Please enter file name:', function (btnText, sInput) {
                 if (btnText === 'ok') {
                     record.appendChild({name: sInput, size: Math.ceil(Math.random() * 100000), leaf: true});
-                    store.sync();
+                    // store.sync();
+                    grid.getStore('TreeId');
+
                 }
             }, this);
         } else {
@@ -42,7 +45,9 @@ Ext.define('TreeXu.view.treeview.TreeViewController', {
                 if (btnText === 'ok') {
                     console.log(record)
                     record.set({name: sInput, leaf: record.data.leaf});
-                    store.sync();
+                    // store.sync();
+                    grid.getStore('TreeId');
+
                 }
             }, this);
         } else {
