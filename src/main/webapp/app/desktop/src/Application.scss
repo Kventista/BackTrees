@@ -1,8 +1,13 @@
 @include extjs-button-toolbar-small-ui(
-  $ui: 'toolbutton',
-  $font-size: 34px,
-  $padding: 5px 10px 5px 10px,
-	$background-color: transparent,
-	$glyph-color: white,
-  $border-color: transparent
+        $ui: 'toolbutton',
+        $font-size: 34px,
+        $padding: 5px 10px 5px 10px,
+        $background-color: transparent,
+        $glyph-color: white,
+        $border-color: transparent
+
 );
+
+.x-body {
+  font-family: "Comic Sans MS";
+}

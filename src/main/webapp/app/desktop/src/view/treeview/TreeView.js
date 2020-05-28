@@ -6,6 +6,8 @@ Ext.define('TreeXu.view.treeview.TreeView', {
         'TreeXu.store.TreeData'
     ],
     cls: 'treeview',
+    ui: 'treev',
+    frame: true,
     // store: ['TreeId'],
     // bind: {
     //     store: '{treeData}'
@@ -39,7 +41,7 @@ Ext.define('TreeXu.view.treeview.TreeView', {
     },{
         xtype: 'actioncolumn',
         text: 'Add folder',
-        width: 100,
+        width: 155,
         menuDisabled: true,
         tooltip: 'Add folder',
         align: 'center',
@@ -48,7 +50,7 @@ Ext.define('TreeXu.view.treeview.TreeView', {
     },{
         xtype: 'actioncolumn',
         text: 'Add file',
-        width: 100,
+        width: 155,
         menuDisabled: true,
         tooltip: 'Add file',
         align: 'center',
@@ -57,7 +59,7 @@ Ext.define('TreeXu.view.treeview.TreeView', {
     },{
         xtype: 'actioncolumn',
         text: 'Edit',
-        width: 55,
+        width: 100,
         menuDisabled: true,
         tooltip: 'Edit task',
         align: 'center',
@@ -66,7 +68,7 @@ Ext.define('TreeXu.view.treeview.TreeView', {
     }, {
         xtype: 'actioncolumn',
         text: 'Kill',
-        width: 55,
+        width: 100,
         menuDisabled: true,
         tooltip: 'Kill me plz',
         align: 'center',

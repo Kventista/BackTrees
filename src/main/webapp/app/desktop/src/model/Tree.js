@@ -37,6 +37,11 @@ Ext.define('TreeXu.model.Tree', {
             read: 'http://localhost:8080/treeFolder/children/',
             update: 'http://localhost:8080/treeFolder/',
             destroy: 'http://localhost:8080/treeFolder/'
+            // create: '/treeFolder/',
+            // read: '/treeFolder/children/',
+            // update: '/treeFolder/',
+            // destroy: '/treeFolder/'
+
         },
         reader: {
             type: 'json',

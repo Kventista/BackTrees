@@ -1,7 +1,40 @@
 .treeview {
-  font-size: 28px;
+  font-size:22px;
   border-bottom: 1px solid darken($base-color, 10%);
-  color: #467ea7;
+  color: #4983cb;
   background-color:$base-color;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.4);
 }
+.x-grid-row {
+  height: 28px;
+}
+
+.x-box-inner{
+  height: 34px;
+}
+
+.x-title-text {
+  padding-left: 16px;
+}
+
+.x-column-header-inner {
+  padding: 12px 14px;
+}
+
+.x-column-header-text-inner {
+  font: normal 18px "Comic Sans MS";
+
+}
+.x-grid-item  {
+  //font-size: 18px;
+  color: #072f61;
+  font: normal 18px "Comic Sans MS";
+}
+
+.x-action-col-icon {
+  font-size: 18px;
+}
+.x-tree-elbow-img  {
+  margin-top: 5px;}
+.x-tree-icon {
+  margin-top: 5px;}

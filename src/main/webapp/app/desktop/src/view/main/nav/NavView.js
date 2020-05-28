@@ -3,9 +3,11 @@ Ext.define("TreeXu.view.main.nav.NavView", {
 	xtype: "navview",
 	controller: "navviewcontroller",
 	viewModel: { type: "navviewmodel"},
-  cls: "navview",
-  id: 'navview',
+	cls: "navview",
+	id: 'navview',
 	layout: "fit",
+	ui: 'navw',
+	frame: 'true',
 
 	// This is like a normal config -- where the values are applied as the object is created --
 	// but with a renderConfig, the values aren't applied until the component has been rendered.
