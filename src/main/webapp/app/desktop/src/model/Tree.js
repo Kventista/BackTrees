@@ -24,7 +24,7 @@ Ext.define('TreeXu.model.Tree', {
     ],
     proxy: {
         type: 'rest',
-        url: 'http://localhost:8080/treeFolder/',
+        url: '/treeFolder/',
         idParam: 'id',
         actionMethods: {
             create: 'POST',
@@ -33,14 +33,14 @@ Ext.define('TreeXu.model.Tree', {
             destroy: 'DELETE'
         },
         api: {
-            create: 'http://localhost:8080/treeFolder/',
-            read: 'http://localhost:8080/treeFolder/children/',
-            update: 'http://localhost:8080/treeFolder/',
-            destroy: 'http://localhost:8080/treeFolder/'
-            // create: '/treeFolder/',
-            // read: '/treeFolder/children/',
-            // update: '/treeFolder/',
-            // destroy: '/treeFolder/'
+            // create: 'http://localhost:8080/treeFolder/',
+            // read: 'http://localhost:8080/treeFolder/children/',
+            // update: 'http://localhost:8080/treeFolder/',
+            // destroy: 'http://localhost:8080/treeFolder/'
+            create: '/treeFolder/',
+            read: '/treeFolder/children/',
+            update: '/treeFolder/',
+            destroy: '/treeFolder/'
 
         },
         reader: {
