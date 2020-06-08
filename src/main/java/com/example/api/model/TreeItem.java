@@ -1,22 +1,31 @@
 package com.example.api.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+//@Table(name = "TREEITEM")
 public class TreeItem {
 
-    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    @javax.persistence.Id
+//    @GeneratedValue
+//    @Column(name = "id", nullable = false)
+    private String Id;
     private String parentId = "root";
 
+//    @Column(name = "item_name")
     private String name;
+
+//    @Column(name = "size")
     private String size;
+
+//    @Column(name = "isLeaf", nullable = false)
     private boolean isLeaf;
+
+    public TreeItem() {
+
+    }
+
 
 
     public String getName() {
@@ -45,11 +54,11 @@ public class TreeItem {
 
 
     public String getId() {
-        return id;
+        return Id;
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.Id = id;
     }
 
     public String getParentId() {
