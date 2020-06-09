@@ -2,7 +2,7 @@ Ext.define('TreeXu.Application', {
 	extend: 'Ext.app.Application',
 	name: 'TreeXu',
 	requires: ['TreeXu.*'],
-	defaultToken: 'homeview',
+	defaultToken: 'woodview',
 
 	launch: function () {
 		Ext.ariaWarn = Ext.emptyFn

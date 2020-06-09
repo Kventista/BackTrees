@@ -1,7 +1,11 @@
-Ext.define('TreeXu.model.Tree', {
-    extend: 'TreeXu.model.Base',
+Ext.define('TreeXu.view.wood.WoodViewModel', {
+    extend: 'TreeXu.view.wood.BaseViewModel',
     requires: ['Ext.data.proxy.Ajax'],
-    alias: 'model.appTree',
+    alias: 'viewmodel.WoodViewModel',
+    xtype: 'woodviewmodel',
+    data: {
+        name: 'woodviewmodel'
+    },
     idProperty : 'id',
     fields: [{
         name: 'id',

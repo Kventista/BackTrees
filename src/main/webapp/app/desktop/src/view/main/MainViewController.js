@@ -1,7 +1,7 @@
 Ext.define('TreeXu.view.main.MainViewController', {
   extend: 'Ext.app.ViewController',
   alias: 'controller.mainviewcontroller',
-
+  // requires: ['apptreeview'],
   // Simply run setCenterViewXtype, passing the record that describes the center view,
   // and updateCenterViewXtype takes care of the rest.
   config: {

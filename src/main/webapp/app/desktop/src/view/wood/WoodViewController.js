@@ -4,9 +4,9 @@
  */
 const store = Ext.getStore('TreeId');
 
-Ext.define('TreeXu.view.treeview.TreeViewController', {
+Ext.define('TreeXu.view.wood.WoodViewController', {
     extend: 'Ext.app.ViewController',
-    alias: "controller.appTreeViewController",
+    alias: "controller.WoodViewController",
     onAddFolderAction: function (grid, rowIndex, colIndex, actionItem, event, record) {
         if (!record.isLeaf()) {
             Ext.MessageBox.prompt('New folder', 'Please enter folder name:', function (btnText, sInput) {
