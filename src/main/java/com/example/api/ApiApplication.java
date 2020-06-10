@@ -15,8 +15,4 @@ public class ApiApplication {
     }
 
 
-//    @RequestMapping("create-treeItem")
-//    public TreeItem createTreeItem() {
-//        return treeItemRepository.save(new TreeItem());
-//    }
 }

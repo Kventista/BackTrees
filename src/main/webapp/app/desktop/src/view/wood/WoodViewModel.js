@@ -3,9 +3,9 @@ Ext.define('TreeXu.view.wood.WoodViewModel', {
     requires: ['Ext.data.proxy.Ajax'],
     alias: 'viewmodel.WoodViewModel',
     xtype: 'woodviewmodel',
-    data: {
-        name: 'woodviewmodel'
-    },
+    // data: {
+    //     name: 'woodviewmodel'
+    // },
     idProperty : 'id',
     fields: [{
         name: 'id',

@@ -4,7 +4,7 @@ Ext.define('TreeXu.store.WoodStore', {
     requires: ['TreeXu.view.wood.WoodViewModel'],
     model: 'TreeXu.view.wood.WoodViewModel',
     autoLoad: true,
-    //autoSync: true,
+    autoSync: true,
     type: 'tree',
     storeId: 'TreeId',
     fields: ['name', 'size'],
