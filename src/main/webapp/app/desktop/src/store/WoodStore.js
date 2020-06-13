@@ -6,8 +6,14 @@ Ext.define('TreeXu.store.WoodStore', {
     autoLoad: true,
     autoSync: true,
     type: 'tree',
-    storeId: 'TreeId',
-    fields: ['name', 'size'],
+    storeId: 'WoodStore',
+        fields: [
+            'parentId', 'id', 'name'
+        ],
+
+
 
 });
+
+
 

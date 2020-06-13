@@ -1,8 +1,4 @@
-/**
- * This class is the controller for the main view for the application. It is specified as
- * the "controller" of the Main view class.
- */
-const store = Ext.getStore('TreeId');
+const store = Ext.getStore('WoodStore');
 
 Ext.define('TreeXu.view.wood.WoodViewController', {
     extend: 'Ext.app.ViewController',
@@ -12,11 +8,17 @@ Ext.define('TreeXu.view.wood.WoodViewController', {
             Ext.MessageBox.prompt('New folder', 'Please enter folder name:', function (btnText, sInput) {
                 if (btnText === 'ok') {
                     record.appendChild({name: sInput, leaf: false});
-                    store.sync();
                     record.expand();
-                    // grid.getStore('TreeId');
+                    // store.sync();
 
+                    grid.getStore('WoodStore');
+                    record.get('parentId');
+                    record.get('id');
+                    record.get('name');
+
+                    console.log(record.get('id'), record.get('name'))
                 }
+
             }, this);
         } else {
             Ext.Msg.alert("Error", "You cannot add directory to file");
@@ -29,11 +31,16 @@ Ext.define('TreeXu.view.wood.WoodViewController', {
             Ext.MessageBox.prompt('New file', 'Please enter file name:', function (btnText, sInput) {
                 if (btnText === 'ok') {
                     record.appendChild({name: sInput, size: Math.ceil(Math.random() * 100000), leaf: true});
-                    store.sync();
                     record.expand();
-                    // grid.getStore('TreeId');
+                    // store.sync();
 
+                    grid.getStore('WoodStore');
+                    record.get('parentId');
+                    record.get('id');
+                    record.get('name');
+                    console.log(record.get('id'), record.get('name'))
                 }
+
             }, this);
         } else {
             Ext.Msg.alert("Error", "You cannot add anything to file");
@@ -46,12 +53,18 @@ Ext.define('TreeXu.view.wood.WoodViewController', {
                 if (btnText === 'ok') {
                     console.log(record)
                     record.set({name: sInput, leaf: record.data.leaf});
-                    store.sync();
-                    // grid.getStore('TreeId');
+                    record.expand();
+
+                    grid.getStore('WoodStore');
+                    record.get('parentId');
+                    record.get('id');
+                    record.get('name');
+
+                    console.log(record.get('parentId'), record.get('name'))
 
                 }
             }, this);
-        } else {
+        }else {
             Ext.Msg.alert("Error", "You cannot edit Root. It will destroy Universe. Sorry.");
         }
     },
@@ -62,5 +75,7 @@ Ext.define('TreeXu.view.wood.WoodViewController', {
         } else {
             Ext.Msg.alert("Error", "You cannot delete Root. It will destroy Universe. Sorry.");
         }
-    }
+    },
+
+
 });

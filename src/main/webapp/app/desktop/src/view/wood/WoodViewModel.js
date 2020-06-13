@@ -3,16 +3,15 @@ Ext.define('TreeXu.view.wood.WoodViewModel', {
     requires: ['Ext.data.proxy.Ajax'],
     alias: 'viewmodel.WoodViewModel',
     xtype: 'woodviewmodel',
-    // data: {
-    //     name: 'woodviewmodel'
-    // },
     idProperty : 'id',
     fields: [{
         name: 'id',
-        mapping: 'myId'
+        mapping: 'myId',
+
     }, {
         name: 'name',
-        mapping: 'name'
+        mapping: 'name',
+
     }, {
         name: 'size',
         mapping: 'size'
@@ -49,12 +48,17 @@ Ext.define('TreeXu.view.wood.WoodViewModel', {
         },
         reader: {
             type: 'json',
-            rootProperty: '_embedded.treeFolder'
+            rootProperty: '_embedded.treeFolder',
+            successProperty: 'success'   //*попытки настроить store
+
         },
         writer: {
             type: 'json',
-            writeAllFields: false
-        }
+            writeAllFields: true //*был false
+        },
+
+
+
     }
 });
 

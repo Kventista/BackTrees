@@ -23,6 +23,7 @@ Ext.define('TreeXu.view.wood.WoodView', {
     // },
     // store: "appTreeData",
     // store: 'TreeXu.store.TreeData',
+
     store:Ext.create('store.WoodStore'),
     rootVisible: true,
     title: "Directory tree",
@@ -83,10 +84,11 @@ Ext.define('TreeXu.view.wood.WoodView', {
     viewConfig: {
         plugins: {
             treeviewdragdrop: {
-                containerScroll: true
+                containerScroll: true,
             }
         }
-    }
+    },
+
 
 });
 
