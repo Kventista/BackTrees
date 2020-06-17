@@ -5,12 +5,12 @@ Ext.define('TreeXu.store.WoodStore', {
     model: 'TreeXu.view.wood.WoodViewModel',
     autoLoad: true,
     autoSync: true,
+    async: true,
     type: 'tree',
     storeId: 'WoodStore',
         fields: [
-            'parentId', 'id', 'name'
+            'id', 'leaf', 'name', 'parentId',  'size'
         ],
-
 
 
 });

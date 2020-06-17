@@ -2,9 +2,7 @@ Ext.define('TreeXu.view.wood.WoodView', {
     extend: 'Ext.tree.Panel',
     xtype: 'woodview',
     controller: "WoodViewController",
-    // viewModel: {
-    //     type: 'woodviewmodel'
-    // },
+
     requires: [
        'Ext.tree.plugin.TreeViewDragDrop',
         'TreeXu.store.WoodStore'
@@ -12,18 +10,6 @@ Ext.define('TreeXu.view.wood.WoodView', {
     cls: 'woodv',
     ui: 'woodv',
     frame: true,
-    // store: ['TreeId'],
-    // bind: {
-    //     store: '{treeData}'
-    // },
-    // store: 'store.appTreeData',
-    // store: ['store.appTreeData'],
-    // bind: {
-    //     store: '{appTreeData}',
-    // },
-    // store: "appTreeData",
-    // store: 'TreeXu.store.TreeData',
-
     store:Ext.create('store.WoodStore'),
     rootVisible: true,
     title: "Directory tree",

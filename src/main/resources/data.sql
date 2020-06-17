@@ -1,3 +1,5 @@
-INSERT INTO  TREE_ITEM (ID, IS_LEAF, NAME, PARENT_ID, SIZE) VALUES
-  (1, FALSE, 'Folder1', 'root', null),
-  (2, TRUE, 'File1', 'root', 28341);
+DELETE FROM TREE_ITEM;
+INSERT INTO TREE_ITEM (ID, IS_LEAF, NAME, PARENT_ID, SIZE)
+VALUES
+  ('32e483b6-2855-4447-9661-615381bd24db', FALSE, 'Folder1', 'root', null),
+  ('0fa30ea9-7e32-44f4-9f00-703f4a5de136', TRUE, 'File1', 'root', 28341);

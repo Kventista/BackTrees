@@ -1,29 +1,34 @@
 Ext.define('TreeXu.view.wood.WoodViewModel', {
     extend: 'TreeXu.view.wood.BaseViewModel',
-    requires: ['Ext.data.proxy.Ajax'],
+    requires: ['TreeXu.view.wood.BaseViewModel',
+        'Ext.data.proxy.Ajax',
+        //'Ext.data.identifier.Uuid'
+        ],
     alias: 'viewmodel.WoodViewModel',
+    identifier: 'uuid',
     xtype: 'woodviewmodel',
     idProperty : 'id',
     fields: [{
-        name: 'id',
-        mapping: 'myId',
-
-    }, {
-        name: 'name',
-        mapping: 'name',
-
-    }, {
-        name: 'size',
-        mapping: 'size'
-    },
-        {
-            name: 'leaf',
-            mapping: 'leaf'
+            name: 'id',
+            mapping: 'id',
         },
         {
+            name: 'leaf',
+            mapping: 'leaf',
+        },
+        {
+            name: 'name',
+            mapping: 'name',
+
+            },
+        {
             name: 'parentId',
-            mapping: 'parentId'
-        }
+            mapping: 'parentId',
+        },
+        {
+            name: 'size',
+            mapping: 'size',
+    }
     ],
     proxy: {
         type: 'rest',
@@ -36,10 +41,6 @@ Ext.define('TreeXu.view.wood.WoodViewModel', {
             destroy: 'DELETE'
         },
         api: {
-            // create: 'http://localhost:8080/treeFolder/',
-            // read: 'http://localhost:8080/treeFolder/children/',
-            // update: 'http://localhost:8080/treeFolder/',
-            // destroy: 'http://localhost:8080/treeFolder/'
             create: '/treeFolder/',
             read: '/treeFolder/children/',
             update: '/treeFolder/',
@@ -49,12 +50,11 @@ Ext.define('TreeXu.view.wood.WoodViewModel', {
         reader: {
             type: 'json',
             rootProperty: '_embedded.treeFolder',
-            successProperty: 'success'   //*попытки настроить store
-
+            successProperty: 'success'
         },
         writer: {
             type: 'json',
-            writeAllFields: true //*был false
+            writeAllFields: true
         },
 
 

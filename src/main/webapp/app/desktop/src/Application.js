@@ -2,6 +2,7 @@ Ext.define('TreeXu.Application', {
 	extend: 'Ext.app.Application',
 	name: 'TreeXu',
 	requires: ['TreeXu.*'],
+
 	defaultToken: ' ',
 
 	launch: function () {
